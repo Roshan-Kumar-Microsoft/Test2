@@ -1,5 +1,5 @@
 pool:
-  name: default
+  name: rokpool
 
 steps:
 - script: echo Hello, world!
