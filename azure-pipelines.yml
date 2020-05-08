@@ -35,7 +35,7 @@ jobs:
 #             ls $(Build.ArtifactStagingDirectory)/
  - job: J1
    pool:
-    name: rokpool
+    name: default
    steps:
       - task: PublishBuildArtifacts@1
         inputs:
@@ -51,7 +51,7 @@ jobs:
             ls $(Build.ArtifactStagingDirectory)/
  - job: J2
    pool:
-    name: rokpool
+    name: default
    steps:
       - task: PublishBuildArtifacts@1
         inputs:
@@ -61,7 +61,7 @@ jobs:
 
  - job: J3
    pool:
-    name: rokpool
+    name: default
    dependsOn: J1
    steps:
       - task: DownloadBuildArtifacts@0
